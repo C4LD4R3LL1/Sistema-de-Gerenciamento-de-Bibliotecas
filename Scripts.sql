@@ -1,3 +1,4 @@
+#Script Criação Banco de Dados
 CREATE TABLE LIVRO (
     ID_LIVRO NUMERIC(5) PRIMARY KEY,
     TITULO VARCHAR(80),
@@ -34,6 +35,7 @@ FOREIGN KEY (ID_AUTOR)
 REFERENCES AUTOR(ID_AUTOR)
 ON DELETE RESTRICT;
 
+#Script para inserir Autor
 INSERT INTO `atividade`.`autor` (`ID_AUTOR`, `NOME_AUTOR`, `DATA_NASCIMENTO`) VALUES ('1',"Antoine de Saint-Exupéry",'1900-07-29');
 
 INSERT INTO `atividade`.`autor` (`ID_AUTOR`, `NOME_AUTOR`, `DATA_NASCIMENTO`) VALUES ('2', 'Rick Riordan', '1964-06-05');
@@ -46,12 +48,14 @@ INSERT INTO `atividade`.`autor` (`ID_AUTOR`, `NOME_AUTOR`, `DATA_NASCIMENTO`) VA
 
 INSERT INTO `atividade`.`autor` (`ID_AUTOR`, `NOME_AUTOR`, `DATA_NASCIMENTO`) VALUES ('6', 'Billy Graham', '1918-11-07');
 
+#Script para inserir Situação
 INSERT INTO `atividade`.`situacao` (`ID_SITUACAO`, `NOME_SITUACAO`) VALUES ('1', 'Disponivel');
 
 INSERT INTO `atividade`.`situacao` (`ID_SITUACAO`, `NOME_SITUACAO`) VALUES ('2', 'Indisponivel');
 
 INSERT INTO `atividade`.`situacao` (`ID_SITUACAO`, `NOME_SITUACAO`) VALUES ('3', 'Conserto');
 
+#Script para inserir Livros
 INSERT INTO `atividade`.`livro` (`ID_LIVRO`, `TITULO`, `DATA_PUBLICACAO`, `GENERO`, `ID_SITUACAO`) VALUES ('1', 'O Pequeno Príncipe', '1943-4-06', 'Fabula', '1');
 
 INSERT INTO `atividade`.`livro` (`ID_LIVRO`, `TITULO`, `DATA_PUBLICACAO`, `GENERO`, `ID_SITUACAO`) VALUES ('2', 'O Ladrão de Raios', '2005-06-28', 'Mitologia grega', '2');
@@ -68,6 +72,7 @@ INSERT INTO `atividade`.`LIVRO` (`ID_LIVRO`, `TITULO`, `DATA_PUBLICACAO`, `GENER
 
 INSERT INTO `atividade`.`LIVRO` (`ID_LIVRO`, `TITULO`, `DATA_PUBLICACAO`, `GENERO`, `ID_SITUACAO`) VALUES ('8', 'A razão da minha esperança', '2018-03-16', 'Literatura crista', '2');
 
+#Script para inserir Escrita
 INSERT INTO `atividade`.`ESCRITA` (`ID_LIVRO`, `ID_AUTOR`, `ID_ESCRITA`) VALUES ('1', '1', '1');
 
 INSERT INTO `atividade`.`ESCRITA` (`ID_LIVRO`, `ID_AUTOR`, `ID_ESCRITA`) VALUES ('2', '2', '2');
